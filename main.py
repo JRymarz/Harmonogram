@@ -1,8 +1,15 @@
+import firmy
+import miasto
 import skierbieszow
 import labunie
 import gmina_zamosc
 
 # skierbieszow.run()
-# print('\n\n')
+
 # labunie.run()
-gmina_zamosc.run()
+
+# gmina_zamosc.run()
+
+# firmy.run()
+
+miasto.run()

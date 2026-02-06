@@ -4,7 +4,7 @@ import datetime
 year = datetime.datetime.now().year
 
 def build_insert(row, GMINA_ID):
-    place = row['Miejscowości']
+    place = row['Miejscowości'] if 'Miejscowości' in row else row['ULICE']
     wastes_raw = row['Rodzaj odpadów']
     dates = row['daty_odbioru']
 

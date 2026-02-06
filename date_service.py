@@ -42,3 +42,23 @@ def build_dates(row, year=date.year):
             dates.append(f"{year}-{month_num}-{day:02d}")
 
     return " ".join(dates)
+
+
+# Wersja build_dates gdy w excelu są podane miesiące numerami arabskimi
+def build_dates_variant(row, year=date.year):
+    dates = []
+
+    months = [f"{i:02d}" for i in range(1, 13)]
+
+    for months_num in months:
+        value = row[months_num]
+
+        if pd.isnull(value):
+            continue
+
+        days = [int(d) for d in re.findall(r'\d+', str(value)) if int(d) > 0]
+
+        for day in days:
+            dates.append(f"{year}-{months_num}-{day:02d}")
+
+    return " ".join(dates)
