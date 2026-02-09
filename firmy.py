@@ -11,8 +11,10 @@ date = datetime.datetime.now()
 months = [f"{i:02d}" for i in range(1, 13)]
 
 def run():
+    file_name = 'Firmy.xlsx'
+
     project_root = Path(__file__).parent
-    excel_path = project_root / 'Data' / 'Firmy.xlsx'
+    excel_path = project_root / 'Data' / file_name
 
     data_excel = pd.read_excel(excel_path, header=1)
     data_excel[['ULICE']] = (

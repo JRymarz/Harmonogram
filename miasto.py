@@ -12,12 +12,15 @@ GMINA_ID = place_map.PLACE_MAP['Miasto Zamość']
 date = datetime.datetime.now()
 months = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII']
 
+
 def run(variant):
 
     match variant:
         case 1:
+            file_name = 'Miasto1.xlsx'
+
             project_root = Path(__file__).parent
-            excel_path = project_root / 'Data' / 'Miasto1.xlsx'
+            excel_path = project_root / 'Data' / file_name
 
             data_excel = pd.read_excel(excel_path, header=3)
             data_excel[['ULICE']] = (
@@ -42,8 +45,10 @@ def run(variant):
                     print(insert)
 
         case 2:
+            file_name = 'Miasto2.xlsx'
+
             project_root = Path(__file__).parent
-            excel_path = project_root / 'Data' / 'Miasto2.xlsx'
+            excel_path = project_root / 'Data' / file_name
 
             data_excel = pd.read_excel(excel_path, header=1)
             data_excel['ULICE'] = (

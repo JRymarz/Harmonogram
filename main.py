@@ -12,4 +12,4 @@ import gmina_zamosc
 
 # firmy.run()
 
-miasto.run(2)
+# miasto.run(1)
