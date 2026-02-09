@@ -39,10 +39,12 @@ def run(variant):
 
             data_excel['daty_odbioru'] = data_excel.apply(date_service.build_dates, axis=1)
 
-            for _, row in data_excel.iterrows():
-                insert = insert_service.build_insert(row, GMINA_ID)
-                if insert:
-                    print(insert)
+            with open(f"{project_root}/Output/Miasto{date.year}_1.txt", 'w') as f:
+                for _, row in data_excel.iterrows():
+                    insert = insert_service.build_insert(row, GMINA_ID)
+                    if insert:
+                        print(insert)
+                        print(insert, file=f)
 
         case 2:
             file_name = 'Miasto2.xlsx'
@@ -67,7 +69,9 @@ def run(variant):
 
             data_excel['daty_odbioru'] = data_excel.apply(date_service.build_dates, axis=1)
 
-            for _, row in data_excel.iterrows():
-                insert = insert_service.build_insert(row, GMINA_ID)
-                if insert:
-                    print(insert)
+            with open(f"{project_root}/Output/Miasto{date.year}_2.txt", 'w') as f:
+                for _, row in data_excel.iterrows():
+                    insert = insert_service.build_insert(row, GMINA_ID)
+                    if insert:
+                        print(insert)
+                        print(insert, file=f)

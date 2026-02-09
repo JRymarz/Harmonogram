@@ -4,12 +4,14 @@ import skierbieszow
 import labunie
 import gmina_zamosc
 
-# skierbieszow.run()
+skierbieszow.run()
 
-# labunie.run()
+labunie.run()
 
-# gmina_zamosc.run()
+gmina_zamosc.run()
 
-# firmy.run()
+firmy.run()
 
-# miasto.run(1)
+miasto.run(1)
+
+miasto.run(2)

@@ -25,7 +25,9 @@ def run():
 
     data_excel['daty_odbioru'] = data_excel.apply(date_service.build_dates_variant, axis=1)
 
-    for _, row in data_excel.iterrows():
-        insert = insert_service.build_insert(row, GMINA_ID)
-        if insert:
-            print(insert)
+    with open(f"{project_root}/Output/Firmy{date.year}.txt", 'w') as f:
+        for _, row in data_excel.iterrows():
+            insert = insert_service.build_insert(row, GMINA_ID)
+            if insert:
+                print(insert)
+                print(insert, file=f)
