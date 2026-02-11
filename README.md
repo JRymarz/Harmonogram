@@ -11,11 +11,11 @@ zawierających zapytania SQL typu INSERT.
 
 1. Sklonuj repozytorium.
 2. Wejdź do katalogu projektu.
-3. Utwórz środowisko wirtualne:
+3. Utwórz środowisko wirtualne:  
 	python -m venv .venv
-4. Aktywuj środowisko:
+4. Aktywuj środowisko:  
 	.\.venv\Scripts\activate
-5. Zainstaluj zależności:
+5. Zainstaluj zależności:  
 	pip install -r requirements.txt
 
 
