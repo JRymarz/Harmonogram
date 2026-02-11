@@ -1,13 +1,13 @@
-OPIS PROJEKTU
+# OPIS PROJEKTU
 Skrypt służy do przetwarzania plików Excel z harmonogramem odbioru odpadów i generowania plików .txt
 zawierających zapytania SQL typu INSERT.
 
-WYMAGANIA
+## WYMAGANIA
 
-* Python 3.14+
-* pip
+- Python 3.14+
+- pip
 
-INSTALACJA
+## INSTALACJA
 
 1. Sklonuj repozytorium.
 2. Wejdź do katalogu projektu.
@@ -19,8 +19,8 @@ INSTALACJA
 	pip install -r requirements.txt
 
 
-STRUKTURA KATALOGÓW
-
+## STRUKTURA KATALOGÓW
+<pre>
 Harmonogram/
 │
 ├── Data/        -> tutaj wrzucamy pliki Excel
@@ -28,9 +28,10 @@ Harmonogram/
 ├── Service/     -> logika przetwarzania
 ├── main.py      -> punkt startowy
 └── requirements.txt	-> plik zawierający potrzebne zależności
+</pre>
 
 
-JAK UŻYWAĆ
+## JAK UŻYWAĆ
 
 1. Wrzucić pliki Excel do folderu Data/
 2. Uruchomić:
@@ -38,9 +39,9 @@ JAK UŻYWAĆ
 3. Wygenerowane pliki .txt pojawią się w folderze Output/
 
 
-UWAGI
+## UWAGI
 
-* Pliki Excel muszą mieć zgodną strukturę kolumn.
-* W przypadku zmiany layoutu może być konieczna modyfikacja serwisów przetwarzających dane.
-* Akceptowane nazwy plików Excela to: Firmy.xlsx, GminaZamosc.xlsx, Labunie.xlsx, Miasto1.xlsx,
+- Pliki Excel muszą mieć zgodną strukturę kolumn.
+- W przypadku zmiany layoutu może być konieczna modyfikacja serwisów przetwarzających dane.
+- Akceptowane nazwy plików Excela to: Firmy.xlsx, GminaZamosc.xlsx, Labunie.xlsx, Miasto1.xlsx,
   Miasto2.xlsx, Skierbieszow.xlsx
