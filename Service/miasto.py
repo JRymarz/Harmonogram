@@ -2,11 +2,8 @@ import place_map
 import datetime
 import pandas as pd
 from pathlib import Path
-import re
 
-import date_service
-import insert_service
-
+from Service import date_service, insert_service
 
 GMINA_ID = place_map.PLACE_MAP['Miasto Zamość']
 date = datetime.datetime.now()
@@ -19,7 +16,7 @@ def run(variant):
         case 1:
             file_name = 'Miasto1.xlsx'
 
-            project_root = Path(__file__).parent
+            project_root = Path(__file__).parent.parent
             excel_path = project_root / 'Data' / file_name
 
             data_excel = pd.read_excel(excel_path, header=3)
@@ -49,7 +46,7 @@ def run(variant):
         case 2:
             file_name = 'Miasto2.xlsx'
 
-            project_root = Path(__file__).parent
+            project_root = Path(__file__).parent.parent
             excel_path = project_root / 'Data' / file_name
 
             data_excel = pd.read_excel(excel_path, header=1)

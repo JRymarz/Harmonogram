@@ -3,8 +3,7 @@ import datetime
 import pandas as pd
 from pathlib import Path
 
-import date_service
-import insert_service
+from Service import date_service, insert_service
 
 GMINA_ID = place_map.PLACE_MAP['Miasto Zamość']
 date = datetime.datetime.now()
@@ -13,7 +12,7 @@ months = [f"{i:02d}" for i in range(1, 13)]
 def run():
     file_name = 'Firmy.xlsx'
 
-    project_root = Path(__file__).parent
+    project_root = Path(__file__).parent.parent
     excel_path = project_root / 'Data' / file_name
 
     data_excel = pd.read_excel(excel_path, header=1)

@@ -1,8 +1,4 @@
-import firmy
-import miasto
-import skierbieszow
-import labunie
-import gmina_zamosc
+from Service import firmy, gmina_zamosc, labunie, miasto, skierbieszow
 
 skierbieszow.run()
 

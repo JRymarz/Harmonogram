@@ -1,4 +1,4 @@
-import waste_service
+from Service import waste_service
 import datetime
 
 year = datetime.datetime.now().year
