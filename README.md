@@ -16,7 +16,11 @@ zawierających zapytania SQL typu INSERT.
 4. Aktywuj środowisko:  
 	.\.venv\Scripts\activate
 5. Zainstaluj zależności:  
-	pip install -r requirements.txt
+	pip install -r requirements.txt  
+  
+Jeśli nr 4 jest zablokowany w systemie należy użyć:  
+.venv\Scripts\pip.exe install -r requirements.txt  
+.\.venv\Scripts\python.exe main.py
 
 
 ## STRUKTURA KATALOGÓW
